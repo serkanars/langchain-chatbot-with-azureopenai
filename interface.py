@@ -51,13 +51,13 @@ if prompt := st.chat_input("How can help you?"):
             # Add a blinking cursor to simulate typing
             message_placeholder.markdown(full_response + "▌")
 
-        # if "```python\n" in message_placeholder:
-        #     codes = re.findall(rf"```python\n(.*?)\n```", assistant_response, re.DOTALL)
-        #     for c in codes.split():
-        #             full_response += c + " "
-        #             time.sleep(0.05)
-        #             # Add a blinking cursor to simulate typing
-        #             message_placeholder.code(full_response + "▌")
+         #if "```python\n" in message_placeholder:
+         #   codes = re.findall(rf"```python\n(.*?)\n```", assistant_response, re.DOTALL)
+            for c in codes.split():
+                    full_response += c + " "
+                    time.sleep(0.05)
+                    # Add a blinking cursor to simulate typing
+                    message_placeholder.markdown(full_response + "▌")
 
         message_placeholder.markdown(full_response)
     # Add assistant response to chat history
