@@ -8,7 +8,7 @@ import re
 
 def tsdGPTChatbot(message, user_id):
     data = {"user_id": user_id,"question": message}
-    gpt_response = requests.post(url="http://192.168.1.104:8000/ask", json=data)
+    gpt_response = requests.post(url="http://localhost:8000/ask", json=data)
     res = gpt_response.json()
     return res['answer'],res['prompt_token'],res['ai_token']
 
