@@ -17,8 +17,8 @@ def classification(sentence):
 def sqlInsert(df: pd.DataFrame,table_name: str):
 
     quoted = urllib.parse.quote_plus("""Driver={SQL Server};
-            Server=RPTSERVER;
-            Database=DATA_ANALYTICS;
+            Server=server;
+            Database=database;
             Trusted_Connection=yes;""")
     
     engine = create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
